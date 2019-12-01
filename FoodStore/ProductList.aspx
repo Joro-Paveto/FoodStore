@@ -8,7 +8,7 @@
             </hgroup>
 
             <asp:ListView ID="productList" runat="server"
-                DataKeyNames="productID" GroupItemCount="1"
+                DataKeyNames="productID" GroupItemCount="5"
                 ItemType="FoodStore.Models.Product" SelectMethod="GetProducts" OnSelectedIndexChanged="productList_SelectedIndexChanged">
                 <EmptyDataTemplate>
                     <table >
@@ -29,13 +29,10 @@
                     <td runat="server">
                         <table>
                             <tr>
-                                <td>
-                                    <%--<a href="ProductDetails.aspx?:productID=<%#:Item.ProductID%>">--%>
-                                    <div id="wrapper">
-                                        <img src="/Images/Thumbs/<%#:Item.ImagePath%>" 
-                                            <width="100" height="75" style="border: solid" class="hover"/>
-                                    <p class="text">Click for details</p>
-                                    </div>
+                                <td>                                                                      
+                                    <img src="/Images/Thumbs/<%#:Item.ImagePath%>" 
+                                         <width="100" height="75" style="border: solid" />
+                                    
                                 </td>
                             </tr>
                             <tr>
