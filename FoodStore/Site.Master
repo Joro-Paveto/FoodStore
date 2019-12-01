@@ -70,8 +70,7 @@
                 ItemType="FoodStore.Models.Product"
                 GroupItemCount="5"
                 runat="server"
-                SelectMethod="GetProducts" OnSelectedIndexChanged="Products_SelectedIndexChanged" >  
-                
+                SelectMethod="GetProducts" OnSelectedIndexChanged="Products_SelectedIndexChanged" >                  
                 <GroupTemplate>
                     <tr>
                         <td ID="itemPlaceholder" runat="server"> </td>
@@ -82,9 +81,9 @@
                             <a href="/ProductList.aspx?id=<%# Item.ProductID %>">
                                 <img src="/Images/Thumbs/<%#:Item.ImagePath%>" 
                                  width="100" height="75" style="border:solid" class="hover" />
-                                     <tr class="text">Click for details</tr>                                
+                                <tr class="text">Click for details</tr>                                
                             </a>
-                     </tr>
+                      </tr>
                 </ItemTemplate>                
                 <%--<ItemSeparatorTemplate>   |   </ItemSeparatorTemplate>--%>
                 </asp:ListView>
@@ -97,7 +96,6 @@
                 <p>&copy; <%: DateTime.Now.Year %> - FoodStore</p>
             </footer>
         </div>
-
     </form>
 </body>
 </html>
