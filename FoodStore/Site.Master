@@ -66,19 +66,26 @@
         <div id="ProductMenu" style="text-align: center"> 
             <br />
             <br />
-            <asp:ListView ID="productList"
+            <asp:ListView ID="Products"
                 ItemType="FoodStore.Models.Product"
+                GroupItemCount="5"
                 runat="server"
-                SelectMethod="GetProducts" >                
-                <ItemTemplate>                   
-                    <b style="font-size: large; font-style: italic" >
-                        <a href="/ProductList.aspx?id=<%# Item.ProductID %>">
-                            <img src="/Images/Thumbs/<%#:Item.ImagePath%>" 
-                                 width="100" height="75" style="border:solid" />
-                        </a>
-                    </b>
-                </ItemTemplate>
+                SelectMethod="GetProducts" OnSelectedIndexChanged="Products_SelectedIndexChanged" >  
                 
+                <GroupTemplate>
+                    <tr>
+                        <td ID="itemPlaceholder" runat="server"> </td>
+                    </tr>
+             </GroupTemplate>
+                <ItemTemplate>                   
+                      <tr id="wrapper">
+                            <a href="/ProductList.aspx?id=<%# Item.ProductID %>">
+                                <img src="/Images/Thumbs/<%#:Item.ImagePath%>" 
+                                 width="100" height="75" style="border:solid" class="hover" />
+                                     <tr class="text">Click for details</tr>                                
+                            </a>
+                     </tr>
+                </ItemTemplate>                
                 <%--<ItemSeparatorTemplate>   |   </ItemSeparatorTemplate>--%>
                 </asp:ListView>
         </div>

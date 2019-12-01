@@ -22,5 +22,10 @@ namespace FoodStore
             IQueryable<Product> querys = _db.Products;
             return querys;
         }
+
+        protected void Products_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
