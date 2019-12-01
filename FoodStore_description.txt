@@ -1,0 +1,7 @@
+Online food store basic functionality  - display a list of products with short description.
+Technology - ASP.NET Web Forms.
+ First I created a database using the Code First method, in which to store the products. 
+For the layout I used Cyborg theme for Bootstrap. For displaying the records from the database I used ViewList class.
+All the products are diplayed on the main page and when you click on a product, it redirects to the "ProductList" page, 
+which retrieves data through GetProducts method and display the details for the given product - name, price and the amount 
+in stock or "Out of Stock.
